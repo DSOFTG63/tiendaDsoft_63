@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <div class="contenerdor">
+        
+        <head>
+
+            <meta charset="UTF-8"> <!-- esta meta es para que la pag pueda ser reconocida por cualquier navegador y utilice los caracteres especiales-->
+            <meta name="viewport" content="width=device-width,initial-scale=1"/> <!--esta meta es para que se adapte la pag a cualquier dispositivo-->
+            <title>Almacen DESOFT_63</title>
+            <link rel="shortcut icon" href="imagenes/tenisdosblanco.png"><!-- permite poner una imagen en el titulo de la pestaña del nav-->
+            <link rel="stylesheet" href=reset.css>
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        </head>
+
+        <body>
+
+            <header> <!--encabezado-->
+                <div class="caja">
+
+                    <form class="validacion">
+                        <label for="usuario" class="verificacion">Digite su Usuario</label> <!--genera el texto y realaciona con el for el input-->
+                        <input type="text" id="usuario" class="usuarioDesoft" required>
+                        <label for="contrasenia" class="verificacion">Digite su Contraseña</label> <!--genera el texto y realaciona con el for el input-->
+                        <input type="text" id="contrasenia" class="contrasenia" required>
+                        <input type="submit" value="Validar" class="validar">
+                    </form>
+                    <nav class="navbar">
+                        <!--creamos el menú-->
+                        <ul class="menu" id="menu"><!--lo ubicamos con js-->
+                            <li class="btnHome"><a href="index.html">Home</a></li> <!--<a> sirve para que sea un vinculo que nos lleva a una pagina distinta-->
+                            <li class="btnProductos"><a href="productos.html">Productos</a> </li>
+                            <li class="btncontacto"><a href="contacto.html">Contacto</a></li>
+                        </ul><!--Actuatilizamos icónos **línea 20 link...fontawesome-->
+                        <!--Cuando le demos clic a este icóno se va ha desplegar.-->
+                        <div class="menu-bar">
+                            <i class="fas fa-bars" id="menu-bar"></i>
+                        </div>
+                    </nav>        
+                                      
+                </div>
+            </header>
+
+            <img class="banner" src="imagenes/Deportistas.jpg" alt="imagen de referencia">
+
+            <main class="colorTronco">
+                        
+                <section class="principal"> <!--section permite hacer separaciones de contenido de form semantica, que esta relacionado entre si-->
+
+                    <h2 class="titulo-Nombre">Almacen de Calzado DSOFT_63</h2>
+
+                    <p>Estamos ubicados en el centro de la ciudad, nuestro <strong>Almacen DESOFT_63</strong> trae para al mercado lo mejor en <strong>CALZADO DEPORTIVO</strong> para Usted y su Familia. Fundada en 2022, la Tienda De Tenis DESOFT_63 ya se destaca en la ciudad y conquista nuevos clientes diariamente.</p>
+
+                    <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar comodidad, excelente calidad de productos y bienestar a nuestros clientes"</strong>.</em></p>
+
+                    <p>Ofrecemos productos de alta calidad y asesores que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. La atencion de nuestros vendedores se rige por la excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.</p> 
+
+                </section>
+
+                <section class="seccionMapa">
+                    <center>
+                        <div>
+                        <h3 class="titulo-principal">Nuestra Ubicación</h3>
+                        <p>Nuestra Tienda DESOFT_63 se encuentra ubicada en el corazón de la ciudad</p>
+                        <iframe class="mapa-contenido" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8264217306673!2d-74.1500190857785!3d4.625037943598107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9e9f638a70d1%3A0xdf8f990359e0b1f1!2sPanamericana%20Kennedy!5e0!3m2!1ses-419!2sco!4v1660769636452!5m2!1ses-419!2sco" width="100%" height="315" style="text-align: center" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </center>
+                </section>
+                
+                <section class="diferenciales">
+
+                    <div class="contenido-diferenciales">
+                        <h3 class="titulo-principal">¿Qué nos hace diferentes?</h3>
+                
+                        <ul class="lista-diferenciales">
+                            <li class="items"> Atención Personalizada</li>
+                            <li class="items"> Excelente Ubicación</li>
+                            <li class="items"> Vendedores Calificados</li>
+                            <li class="items"> Variedad de Zapatillas</li>
+                        </ul>
+                        
+                        <img src="imagenes/diferenciales.webp" class="imagen-diferenciales" alt="imagen de referencia">
+                    </div>
+
+                    <div class="video">
+                        <iframe width= 100% height="315" src="https://www.youtube.com/embed/WHMJ_rq8KAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                </section>
+                                                
+            </main>
+                    
+            <footer class="fondo">
+                <img class="imgFooter" src="imagenes/tenisdosblanco.png" alt="Logo imagen Tienda DSOFT_63">
+                <p class="copyrigth">&copy Copyrigth GatoCat - 2022</p>
+            </footer>
+        </body>
+    </div>
+</html>

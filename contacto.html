@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<div class="contenedor">
+    
+        <head>
+
+            <meta charset="UTF-8"> <!-- esta meta es para que la pag pueda ser reconocida por cualquier navegador y utilice los caracteres especiales-->
+            <meta name="viewport" content="width=device-width,initial-scale=1"/> <!--esta meta es para que se adapte la pag a cualquier dispositivo-->
+            <title>Contacto DESOFT_63</title>
+            <link rel="shortcut icon" href="imagenes/tenisdosblanco.png"><!-- permite poner una imagen en el titulo de la pestaña del nav-->
+            <link rel="stylesheet" href=reset.css>
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        </head>
+
+        <body>
+
+            <header> <!--encabezado-->
+                <div class="caja">
+                    <h1><img class="imgLogo" src="imagenes/tenisUno.png"Logo imagen de Tienda Virtual"></h1>
+                    <nav class="navbar">
+                        <!--creamos el menú-->
+                        <ul class="menu" id="menu"><!--lo ubicamos con js-->
+                            <li><a href="index.html">Home</a></li> <!--<a> sirve para que sea un vinculo que nos lleva a una pagina distinta-->
+                            <li><a href="productos.html">Productos</a> </li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul><!--Actuatilizamos icónos **línea 20 link...fontawesome-->
+                        <!--Cuando le demos clic a este icóno se va ha desplegar.-->
+                        <div class="menu-bar">
+                            <i class="fas fa-bars" id="menu-bar"></i>
+                        </div>
+                    </nav>       
+                </div>
+            </header>
+
+            <main class="colorTronco">
+                    
+                <form>
+
+                    <fieldset>
+                        <legend>¿Indíquenos su tipo de documento?</legend>
+                   
+                        <label for="cedulaCiud"><input type="radio" name="contacto" value="cedulaCiud" id="radio-cedulaCiud" checked>Cedula de Ciudadania</label><!--permite generar un input de seleccion-->
+                        
+                        <label for="tarjetaId"><input type="radio" name="contacto" value="tarjetaId" id="tarjetaId">Tarjeta de Identidad</label>
+                        
+
+                        <label for="cedulaExt"><input type="radio" name="contacto" value="cedulaExt" id="cedulaExt">Cedula de Extranjeria</label>
+                        
+                    </fieldset>
+
+                    <label for="id">Numero de Identificación</label>
+                    <input type="id" id="id" class="input-padre" required placeholder="Ejemplo: 1234567890">
+
+                    <label for="nombreapellido">Nombre y Apellido</label> <!--genera el texto y realaciona con el for el input-->
+                    <input type="text" id="nombreapellido" class="input-padre" required> <!--esta etiqueta genera una caja para ingresar datos del usuario-->
+
+                        <fieldset>
+                            <legend class="genero">¿Por favor indiquenos su género?</legend>
+                            <select>
+                                <option>Mujer</option>
+                                <option>Hombre</option>
+                            </select>
+                        </fieldset>
+                    
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" class="input-padre" required placeholder="email@dominio.com"><!--required es una etiqueta que hace obligatorio diligenciar los campos-->
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" class="input-padre" required placeholder="(XXX)XXXXXXX"><!---placeholder permite dejar en el input una muestra al usuario de lo que debe ingresar-->
+
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" cols="70" rows="10" class="input-padre" required></textarea> <!--textarea genera una caja modificable al usuario-->
+                    
+                    <label class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades del Almacen DESOF_63? </label>
+                    
+                </form>
+                <div class="crud">
+                    <input type="submit" value="Enviar Formulario" class="enviar"> <!--genera el boton de enviar-->
+                    <input type="submit" value="Actualizar Datos" class="actualizar">
+                    <input type="submit" value="Buscar Usuario" class="buscar">
+                    <input type="submit" value="Borrar Formulario" class="borrar">
+                </div>
+
+                <div>
+                    <table>
+                        <thead> <!--sirve para  dar encabezado a la tabla-->
+                            <tr> <!--table row indica filas de la tabla-->
+                                <th>Dias de atencion</th> 
+                                <th>Horarios de Atencion</th>
+                            </tr>
+                        </thead>
+
+                        <tbody> <!--esta etiqueta da cuerpo a la tabla-->
+                            <tr>
+                                <td>Martes a Viernes</td> <!--permite ingresar txt a las filas-->
+                                <td>De 10:00 am ~ 08:00 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sabados</td>
+                                <td>De 09:00 am ~ 08:00 pm</td>>
+                            </tr>
+                            <tr>
+                                <td>Domingos</td>
+                                <td>De 09:00 am ~ 06:00 pm</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+
+            </main>
+            <footer class="fondo">
+                <img class="imgFooter" src="imagenes/tenisdosblanco.png" alt="Logo imagen Tienda DSOFT_63">
+                <p class="copyrigth">&copy Copyrigth GatoCat - 2022</p>
+            </footer>
+        </body>
+    </div>
+</html>

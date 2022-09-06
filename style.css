@@ -1,0 +1,672 @@
+.contenedor{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000000;
+   
+    
+}
+
+body{
+    font-family: 'Courgette', cursive;
+    width: 100%;
+    background: black;
+}
+
+header{
+    
+    background-image: url(imagenes/fdp4.jpg);
+    padding: 45px 0 ;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    margin: 0em auto 0em;
+}
+
+.caja{
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.imgLogo{
+    width: 10%;
+    margin-right: 50px;
+    padding: 10px;
+    display: flex;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px; /*permite redondear las esquinas de los cuadros de losproductos*/
+    background-color: whitesmoke;
+    float: left;
+    
+}
+
+.validacion{
+    width: 100%;
+    grid-column: 6/9;
+    display: flex;
+    height: 1em;
+    padding: 0%;
+    color: #94b8d7;
+    background: #012e46;
+    height: 2.5em;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.verificacion{
+    text-align: left;
+    font-size: 1em;
+    font-weight: 1em;
+    box-sizing: border-box;
+    font-weight:normal;
+}
+
+.usuarioDesoft{
+    display:flex;
+    margin: 2px 10px 2px 0;
+    padding: 0px 2px;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contrasenia{
+    display: flex;
+    margin: 2px 10px 2px 0;
+    padding: 0px 2px;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.validar{
+    margin-top: 5px;
+    margin-left: 25px;
+    width: 15%; /* tamaño de la caja de enviar formulario */
+    height: 30px;
+    font-size: 20px; /* tamaño txt*/
+    font-style: italic; /* letra inclinada */
+    color: white; /* color del txt*/
+    border-color: lightcyan; /* da color a los bordes de la caja */
+    border-width: 2px;
+    border-style: solid;
+    background: red; /* color de fondo de la caja */    
+    border-radius: 20px; /* bordea las esquinas de la caja por medio del radio */
+    transition: 500ms all; /* este atributo hace la transicion de color tamaño y txt por defecto al puesto en el hover */
+    cursor:pointer; /* este atributo cambia la flecha por la manito en el cursor*/
+    box-sizing: border-box;
+}
+
+.validar:hover{
+    background: black;
+    color: yellow;
+    transform: scale(1.08); /* aumenta tamaño de la caja cuando pasa sobre él el cursor */
+    border-color: yellow;
+}
+
+.navbar{
+    grid-template-columns: repeat(9, 1fr);
+    padding: 30px 50px 20px 200px;
+    width: auto;
+    align-content: center;
+}
+
+.navbar .brand{
+    color: darkblue;
+    border-style:dotted;
+    margin-top: 10px;
+    border-radius: 10px; 
+}
+
+/*distribuimos horizontalmente el menu*/
+.navbar .menu{
+    grid-column: 6/9;
+    display:flex;
+    margin-top: 15px;
+}
+
+/*Desaparece los punticos de los items de separación*/
+.menu li{
+    list-style: none;
+}
+
+/*Ingresamos a nuestros enlaces directamente */
+.menu li a{
+    text-decoration: none;/*Desaparece la línea de por debajo*/
+    margin-right: 3em;/*Separación de los menú*/
+    font-size: 1.3em;/*Incrementa el tamaño de la letra*/
+    font-weight: 200;/*resalta el texto*/
+    padding: 10px 20px;
+    color: #94b8d7; /*Color de la letra*/
+    background-color: #012e46;
+    border-radius: 10px;
+    transition: 500ms all;
+    cursor:pointer; 
+}
+
+.menu li a:hover{/*Cuando coloquemos el puntero encima cambia de color.*/
+    background-color: red;
+    transition: all .10s;/*Colocamos un transition de 5 segundos.*/
+    color: whitesmoke;/*Color de la letra*/
+    border-radius: 10px;
+    transform: scale(1.08);
+    cursor:pointer;
+}
+
+/*Con está le dicimos que desaparezca las 3 liniecitas y aparezca*/
+.menu-bar{
+    display: none;
+}
+.productos{
+    width: 90%;
+    margin: 0 auto 1em;
+    padding: 50px;
+    margin-bottom: auto;
+    box-sizing: border-box;
+    
+}
+
+.tenismoda{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    
+}
+
+.teniscaminar{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 34px 0 34px;
+    box-sizing: border-box;    
+}
+
+.guayos{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 28%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /* permite que las cajas sean organizadas */
+    /* los border le da la apariencia de las cajas de los productos*/
+    border-color: darkblue;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px; /*permite redondear las esquinas de los cuadros de losproductos*/
+    cursor: pointer;
+   }
+
+.productos li:hover{
+    border-color: yellow;
+}
+
+.productos li:active{
+    border-color: red;
+}
+
+.productos h2{
+    font-size: 30px;
+    color: darkorange;
+    text-shadow: 2px 3px #000055;
+    font-style: italic;
+}
+
+.productos li:hover h2{
+    color: lightskyblue;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+    font-style: italic;
+    color: darkred;
+}
+
+.producto-precio{
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: darkblue;
+}
+
+form{
+    margin: 0px 0px;
+    box-sizing: border-box;
+    color: #012e46;
+    grid-template-columns: repeat(9, 2fr);
+    padding: 30px;
+    -moz-box-align:center;
+    padding: 10px 30% 10px 30%;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 10px 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+} 
+
+.input-padre{ /* de esta manera se unen todos los formatos de input del las mismas proporciones separando con una,*/
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 30px;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.genero{
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+option{
+    font-style:normal;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+
+.checkbox{
+    margin: 30px 0;
+    box-sizing: border-box;
+}
+
+.crud{
+    grid-template-columns: repeat(9, 1fr);
+    padding: 1em 10em 1em 10em;
+    width: 100%;
+    align-content: center;
+}
+.enviar{
+    
+    width: 18%; /* tamaño de la caja de enviar formulario */
+    padding: 15px 15px 10px 5px; /* espaciamiento del txt en la caja, 15px arriba/abajo, 0 laterales */
+    font-size: 18px; /* tamaño txt*/
+    font-style: italic; /* letra inclinada */
+    font-weight: bold; /* negrilla*/
+    color: #94b8d7; /*Color de la letra*/
+    background-color: #012e46;
+    
+    border: none; /* elimina los bordes de la caja */
+    border-radius: 20px; /* bordea las esquinas de la caja por medio del radio */
+    transition: 500ms all; /* este atributo hace la transicion de color tamaño y txt por defecto al puesto en el hover */
+    cursor:pointer; /* este atributo cambia la flecha por la manito en el cursor*/
+    box-sizing: border-box;
+}
+
+.enviar:hover{
+    color: #012e46; /* color del txt*/
+    background: #94b8d7; /* color de fondo de la caja */
+    transform: scale(1.02); /* aumenta tamaño de la caja cuando pasa sobre él el cursor */
+}
+
+.actualizar{
+    width: 18%; /* tamaño de la caja de enviar formulario */
+    padding: 15px 15px 10px 5px; /* espaciamiento del txt en la caja, 15px arriba/abajo, 0 laterales */
+    font-size: 18px; /* tamaño txt*/
+    font-style: italic; /* letra inclinada */
+    font-weight: bold; /* negrilla*/
+    color: #94b8d7; /*Color de la letra*/
+    background-color: #012e46;
+    
+    border: none; /* elimina los bordes de la caja */
+    border-radius: 20px; /* bordea las esquinas de la caja por medio del radio */
+    transition: 500ms all; /* este atributo hace la transicion de color tamaño y txt por defecto al puesto en el hover */
+    cursor:pointer; /* este atributo cambia la flecha por la manito en el cursor*/
+    box-sizing: border-box;
+}
+
+.actualizar:hover{
+    color: #012e46; /* color del txt*/
+    background: #94b8d7; /* color de fondo de la caja */
+    transform: scale(1.02); /* aumenta tamaño de la caja cuando pasa sobre él el cursor */
+}
+
+.buscar{
+    width: 18%; /* tamaño de la caja de enviar formulario */
+    padding: 15px 15px 10px 5px; /* espaciamiento del txt en la caja, 15px arriba/abajo, 0 laterales */
+    font-size: 18px; /* tamaño txt*/
+    font-style: italic; /* letra inclinada */
+    font-weight: bold; /* negrilla*/
+    color: #94b8d7; /*Color de la letra*/
+    background-color: #012e46;
+    border: none; /* elimina los bordes de la caja */
+    border-radius: 20px; /* bordea las esquinas de la caja por medio del radio */
+    transition: 500ms all; /* este atributo hace la transicion de color tamaño y txt por defecto al puesto en el hover */
+    cursor:pointer; /* este atributo cambia la flecha por la manito en el cursor*/
+    box-sizing: border-box;
+}
+
+.buscar:hover{
+    color: #012e46; /* color del txt*/
+    background: #94b8d7; /* color de fondo de la caja */
+    transform: scale(1.02); /* aumenta tamaño de la caja cuando pasa sobre él el cursor */
+}
+.borrar{
+    width: 18%; /* tamaño de la caja de enviar formulario */
+    padding: 15px 15px 10px 5px; /* espaciamiento del txt en la caja, 15px arriba/abajo, 0 laterales */
+    font-size: 18px; /* tamaño txt*/
+    font-style: italic; /* letra inclinada */
+    font-weight: bold; /* negrilla*/
+    color: aquamarine; /* color del txt*/
+    background: red; /* color de fondo de la caja */
+    border: none; /* elimina los bordes de la caja */
+    border-radius: 20px; /* bordea las esquinas de la caja por medio del radio */
+    transition: 500ms all; /* este atributo hace la transicion de color tamaño y txt por defecto al puesto en el hover */
+    cursor:pointer; /* este atributo cambia la flecha por la manito en el cursor*/
+    box-sizing: border-box;
+}
+
+.borrar:hover{
+    background: #ffff56;
+    color: #012e46;
+    transform: scale(1.02); /* aumenta tamaño de la caja cuando pasa sobre él el cursor */
+}
+
+table{
+    grid-template-columns: repeat(9, 1fr);
+    padding: 1em 10em 1em 15em;
+    width: 35%;
+    align-content: center;
+    margin: 1em 20em 0.2em 25em;
+    transition: 500ms all;
+    border-radius: 10px;
+    
+}
+
+table:hover{
+    transform: scale(1.03);
+} 
+
+thead{
+    background: orange;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+}
+
+td, th{
+    border: 2px solid black;
+}
+
+td{
+    background: #BBBBBB;
+    font-style: oblique;
+    font-weight:bolder;
+    font-size: 20px;
+}
+
+/******************************** ACA INICIA EL CSS DE ESTYLO DEL HOME ***************************************************************/
+
+.banner{
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 0em auto 0em;
+    
+}
+
+.colorTronco{
+    
+    background-image: url(./imagenes/fdp5.jpg);
+    margin: 2px auto 0px auto;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+/* main > p = selecciona y aplica el cambio solo al parrafo que es hijo del main*/
+/* img + p = así aplica solo a los elementos hermanos o que son del mismo nivel para este caso al primer parrafo*/
+/* img ~ p = asi aplicaria el cambio a todos los parrafos hermanos o del mismo nivel*/
+
+
+.principal{
+    padding: 1em 0;
+    width: 100%; /*la pantalla total tiene 1270px el valor de 940 es para que trabaje sobre ese rango*/
+    margin: 0 0 0.5em;
+    box-sizing: border-box;
+}
+
+.titulo-Nombre{
+    width: 100%;
+    text-align: center;
+    font-size: 4em; /* con (2em) estamos pidiendo que multiplique por 2 el tamaño que viene por defecto de la letra*/
+    margin: 0 0 1em; /* 0 arriba, 0 derecha, 1em abajo, 0 izquierda*/
+    color: blue;
+    text-shadow: 2px 3px darkblue;
+    font-style: italic;
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 3em; /* con (2em) estamos pidiendo que multiplique por 2 el tamaño que viene por defecto de la letra*/
+    margin: 0 0 0.5em; /* 0 arriba, 0 derecha, 1em abajo, 0 izquierda*/
+    clear: left;
+    text-shadow: 2px 2px darkblue;
+    color: blue;
+}
+
+.titulo-principal::first-letter{
+    font-weight: bold;    
+}
+
+.principal p{
+    margin: 1em 4em 1em;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;    
+}
+
+.principal strong{
+    font-weight: bold;
+    font-style: italic;
+    color: darkblue;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.logoTres{
+    top: 0;
+    width: 25%;
+    margin: 0;
+    padding: 50px;
+    float: left; /*sirve para que en la imagen elementos de texto o elementos en línea se posicionan alrededor de él*/
+    margin: 0 20px 20px 0;
+    border-radius: 20px;
+    transition: 1s all;
+    box-sizing: border-box;
+}
+
+.logoTres:hover{
+    transform: scale(1.2);
+} 
+
+.seccionMapa{
+    padding: 3em 0;
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* linear-gradient= permite hacer degradacion de los colores, se puede añadir alguna inclinacion en grados(radios)*/
+}
+
+.seccionMapa p{
+    margin: 0 0 1em;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+.mapa-contenido{
+    width: 800px;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    box-sizing: border-box;
+}
+
+.contenido-diferenciales{
+    width: 700px;
+    margin: 0 auto;
+    color: red;
+    box-sizing: border-box;
+
+}
+
+.lista-diferenciales{
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    font-size: 1.2em;
+    font-style: italic;
+    color: black;
+    
+}
+
+.items{
+    line-height: 2em;
+    font-weight: bold;
+    text-align: left;
+    transition: 500ms all;
+     
+}
+
+.items:hover{
+    transform: scale(1.1);
+    color: red;
+}
+
+.items:before{
+    content: "٭";
+}
+/*
+.items:after{
+    content: "٭";
+}*/
+
+.items:nth-child(0){ /* nth-child no permite seleccionar un item de la lista y darle estilos distintos a los demas*/
+    font-weight: bold;   
+}
+
+.imagen-diferenciales{
+    width: 58%;
+    height: 200px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.imagen-diferenciales:hover{
+    border-radius: 30px;
+    opacity: 10;
+    transition: 700ms;
+    box-shadow: 7px 7px 15px 5px #000055;
+    /* el primer 10px es eje horizontal, el segundo 10px es eje vertical, el tercer 30px es la difuminacion, el cuarto parametro 8px es la expansion de la difuminacion y el quinto parametro es el color*/
+}
+
+.video{
+    width: 800px;/*tamaño del video*/
+    margin: 2em auto 2em auto;
+    box-sizing: border-box;
+}
+
+.fondo{
+    text-align: center;
+    margin: 2px auto;
+    background: url(imagenes/fdp4.jpg);
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.imgFooter{
+    
+    text-align: center;
+    margin: 0em auto 0em;
+    padding: 8px;
+    vertical-align: bottom;
+    box-sizing:border-box;   
+    border-color: whitesmoke;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px; /*permite redondear las esquinas de los cuadros de losproductos*/
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    align-content: space-between;
+    box-sizing: border-box;
+}
+
+.copyrigth{
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    width: 13%;
+    margin: 1em auto 1em ;
+    padding: 2px;
+    text-shadow: -1px 0 yellow, 1px 0 yellow, 0 1px yellow, 0 -1px yellow;
+    color: black;
+    border-color: yellow;
+     /* permite que las cajas sean organizadas */
+    /* los border le da la apariencia de las cajas de los productos*/
+    box-sizing: content-box;
+    background: black;
+    border-radius: 10px; /*permite redondear las esquinas de los cuadros de losproductos*/
+    box-sizing: border-box;
+}
+
+/* esta funcion nos sirve para adaptar los tamaños de las imagenes y textos cuando 
+se visita la pag desde un telefono */
+
+@media screen and (max-width:800px){
+
+    .contenedor{
+        width: 100%;
+    }
+
+    h1{
+        text-align:justify;
+        width: 100%;
+    }
+
+    nav, .validacion{
+        position: static;
+    }
+    
+    head, body, main, .caja, .principal, .seccionMapa, .contenido-diferenciales, .video, footer{
+        width: 100%;
+    }
+    .lista-diferenciales, .imagen-diferenciales, .mapa-contenido{
+        width: 100%;
+    }
+}
+
+
+
