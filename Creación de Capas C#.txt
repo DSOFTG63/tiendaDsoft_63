@@ -1,0 +1,63 @@
+--------------Comandos Proyecto Desarrollo de Software-------
+
+1. abrir cmd del sistema
+2. cd \ -> nos ubica en la carpeta raíz del disco C
+3. mkdir TDSoft63(nombre de la carpeta) -> nos crea la carpeta que va a tener el proyecto
+4. dir -> nos muestra todas las carpetas listadas del disco 
+5. cd TDsoft63(nombre de la carpeta recien creada(TD) -> Nos ubica en la carpeta
+6. dir -> nos muestra todas las carpetas listadas del disco 
+7. dotnet new sln -o TiendaDSoft63.App  -> Nos crea la solución
+8. dotnet new classlib -o TiendaDSoft63.App.Dominio -> Crea la capa dominio
+9. dotnet new classlib -o TiendaDSoft63.App.Persistencia -> Crea la capa Persistencia
+10. dotnet new webapi -o TiendaDSoft63.App.Servicios -> Crea la capa servicios
+11. code . -> Estando en la carpeta que contiene el proyecto.App , abre el proyecto en visual estudio code
+____________________________Visual estudio Code_______________________________
+12. En la capa dominio creamos la carpeta Entidades
+13. En la carpeta entidades creamos las entidades del proyecto.cs cada una
+14. dotnet tool install --global dotnet-ef --version 3.1.10 -> en TiendaDSoft63.App
+____________________________Capa Persistencia_______________________________________________________
+15. dotnet add package Microsoft.EntityFrameworkCore --version 5.0.0 
+16. dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.0
+17. dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0
+18. dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.0
+19. (En la capa Persistencia) Crear las carpetas 1. AppData y 2. AppRepositorios
+20. (En la carpeta AppRepositorios) Crear el folder AppContext.cs 
+     En este folder se le hace el DbSet a cada clase del dominio.
+     Ejemplo:
+********************************************************************************
+using Microsoft.EntityFrameworkCore;
+using TiendaDSoft63.App.Dominio;
+
+namespace TiendaDSoft63.Persistencia
+{
+    public class AppContext : DbContext
+    {
+        public DbSet<Persona> Personas {get;set;}
+        public DbSet<Administrador> Administradores {get;set;}
+        public DbSet<Cliente> Clientes {get;set;}
+        public DbSet<Producto> Productos {get;set;}
+        public DbSet<Tienda> Tiendas {get;set;}
+        public DbSet<Vendedor> Vendedores {get;set;}
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder
+                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = TiendaDSoft63Data");
+            }
+        }
+    }
+}
+********************************************************************************
+21. dotnet add reference ..\TiendaDSoft63.App.Dominio\ -> Referencia en la capa persistencia
+_________________________cmd________________________________
+22. (En TiendaDSoft63.App>)dotnet new console -o TiendaDSoft63.App.Consola
+23. (En TiendaDSoft63.App.Consola>) dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.0
+24. (En TiendaDSoft63.App.Consola>) dotnet add reference ..\TiendaDSoft63.App.Dominio\
+25. (En TiendaDSoft63.App.Consola>) dotnet add reference ..\TiendaDSoft63.App.Persistencia\
+_________________________Migración (CapaPersistencia)_________________________
+26. dotnet ef migrations add Inicial --startup-project ..\TiendaDSoft63.App.Consola\
+27. dotnet ef database update --startup-project ..\TiendaDSoft63.App.Consola\
+___________________________________Azure___________________________________________
+28. Click en Connections->New Connection->En server escribir: (localdb)\\MSSQLLocalDB
