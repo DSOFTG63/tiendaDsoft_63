@@ -4,8 +4,10 @@ namespace TiendaDSoft63.App.Dominio{
 
     //Modela el Administrador del sistema
     public class Administrador: Persona{
-        //Identificador único del Administrador
-        public string IdAdministrador {get;set;}
+        //Nombre de usuario en el sistema
+        public string Usuario {get; set;}
+        //Contraseña en el sistema
+        public string contrasenna {get; set;}
         //Fecha de vinculación en la Tienda
         public DateTime FechaVinculación {get;set;}
         //Relación entre el Administrador y la tienda

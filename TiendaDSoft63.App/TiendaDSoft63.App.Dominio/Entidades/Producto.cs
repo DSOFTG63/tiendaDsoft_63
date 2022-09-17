@@ -6,7 +6,7 @@ namespace TiendaDSoft63.App.Dominio{
     public class Producto{
 
         //Identificador único de Producto en el sistema
-        public string IdProducto {get;set;}
+        public int Id {get;set;}
         //Valor del producto en la tienda
         public int Precio {get;set;}
         //Tipo del Producto 

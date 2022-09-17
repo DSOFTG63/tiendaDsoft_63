@@ -5,6 +5,8 @@ namespace TiendaDSoft63.App.Dominio{
     //Modela la tienda en el sistema
     public class Tienda{
 
+        //Identificador unico en el sistena de tienda
+        public int Id {get; set;}
         //Direccion donde está ubicada la tienda
         public string Direccion {get;set;}
         //Telefono de la tienda

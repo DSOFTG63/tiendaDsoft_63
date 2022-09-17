@@ -4,8 +4,7 @@ namespace TiendaDSoft63.App.Dominio{
 
     //Modela el vendedor en el sistema
     public class Vendedor: Persona{
-        //Identificador único del vendedor en el sistema
-        public string IdVendedor {get;set;}
+        
         //Fecha de vinculación del vendedor en la tienda
         public DateTime FechaVinculaciónVendedor {get;set;}
         //Relación entre el Vendedor y el Cliente
